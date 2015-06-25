@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>about | C.Yang</title>
+  <title>Config zsh and iTerm2 in Mac | C.Yang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A coder in Hangzhou ZheJiang China.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://cyang89.com/about/index.html">
+  <meta name="description" content="Mac下配置zsh和iTerm2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Config zsh and iTerm2 in Mac">
+<meta property="og:url" content="http://cyang89.com/2015/06/25/Config-zsh-iterm2-in-mac/index.html">
 <meta property="og:site_name" content="C.Yang">
-<meta property="og:description" content="A coder in Hangzhou ZheJiang China.">
-<meta property="og:updated_time" content="2015-06-14T00:07:20.000Z">
+<meta property="og:description" content="Mac下配置zsh和iTerm2">
+<meta property="og:image" content="http://ohmyz.sh/img/OMZLogo_BnW.png">
+<meta property="og:updated_time" content="2015-06-25T08:24:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="A coder in Hangzhou ZheJiang China.">
+<meta name="twitter:title" content="Config zsh and iTerm2 in Mac">
+<meta name="twitter:description" content="Mac下配置zsh和iTerm2">
   
   
     <link rel="icon" href="/favicon.png">
@@ -123,46 +124,96 @@ var _hmt = _hmt || [];
     
   </div>
 </aside>
-      <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Config-zsh-iterm2-in-mac" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="http://ohmyz.sh/img/OMZLogo_BnW.png" rel="gallery_cibbxe8970008424urkwbejr8">
+        <img src="http://ohmyz.sh/img/OMZLogo_BnW.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      Config zsh and iTerm2 in Mac
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/about/index.html">
-    <time datetime="2015-06-13T23:57:39.000Z" itemprop="datePublished">2015-06-14</time>
+  <a href="/2015/06/25/Config-zsh-iterm2-in-mac/">
+    <time datetime="2015-06-25T07:11:11.000Z" itemprop="datePublished">2015-06-25</time>
   </a>
 </div>
           
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tools/">Tools</a>
+  </div>
+
         </div>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>A coder in Hangzhou ZheJiang China.</p>
+        <p>使用Mac进行开发工作，与在Linux下一样，用到最多的就是终端这个工具了，用好终端可以大大提高我们的开发效率，而据本人了解Mac下最佳的组合便是zsh+iTerm2，下面来讲讲这两个工具的该如何进行配置使用。</p>
+<a id="more"></a>
+<h1 id="iTerm2">iTerm2</h1><p><a href="http://www.iterm2.com/" target="_blank" rel="external">iTerm2</a>提供了比Mac原生终端更强大的功能.具体可以查看其<a href="http://www.iterm2.com/features.html" target="_blank" rel="external">features</a>页面的说明.<br>iTerm2安装十分简单，直接官网下载安装即可。</p>
+<h1 id="zsh">zsh</h1><h2 id="简介">简介</h2><p>zsh是Shell的一个版本，同mac默认安装的bash shell属于同一类软件，不过zsh有着许多bash shell不具有的功能，可以大大提高开发效率。<br><a href="http://ohmyz.sh/" target="_blank" rel="external">Oh-My-Zsh</a>是zsh一个比较流行的配置，拥有很多好看的主题以及插件,这是其官网介绍：</p>
+<blockquote>
+<p>Oh-My-Zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes, and a few things that make you shout…</p>
+</blockquote>
+<h2 id="安装">安装</h2><p>Oh-My-Zsh整体安装是傻瓜式的，只需按照官网描述的方法进行安装即可：</p>
+<ol>
+<li><p>安装zsh<br> 安装Oh-My-Zsh, Zsh版本必须大于v4.3.9<br> 可以使用<code>zsh --version</code>查看版本信息.<br> Mac默认已经装好zsh,只需使用<code>chsh -s /usr/bin/zsh</code>将zsh切换为默认的shell即可.(注意zsh在<code>/etc/shells</code>有显示，以获得可执行权限)<br> 重新打开终端,使用<code>$SHEL</code>，查看是否安装正确</p>
+</li>
+<li><p>安装Oh-My-Zsh</p>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh</span><br></pre></td></tr></table></figure>
+<h2 id="主题配置">主题配置</h2><p>对于zsh主题个人最喜欢powerline-shell这款<br><img src="https://raw.github.com/milkbikis/dotfiles-mac/master/bash-powerline-screenshot.png" alt="powerline-shell"><br>具体配置参考其<a href="https://github.com/milkbikis/powerline-shell" target="_blank" rel="external">github主页</a>配置即可，一定要安装其<a href="https://github.com/Lokaltog/powerline-fonts" target="_blank" rel="external">字体</a>,以免出现乱码。(由于最新Mac使用的python版本已经大于2.6，所以pip以及argparse都不需要安装，如果需要源码安装pip，可以到<a href="https://github.com/pypa/pip" target="_blank" rel="external">pip Github主页</a>下载pip源码，并在目录中执行<code>python setup.py install</code>安装即可)<br>安装完成后，在添加：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function powerline_precmd() &#123;&#10;      export PS1=&#34;$(~/powerline-shell.py $? --shell zsh 2&#62; /dev/null)&#34;&#10;    &#125;&#10;&#10;    function install_powerline_precmd() &#123;&#10;      for s in &#34;$&#123;precmd_functions[@]&#125;&#34;; do&#10;        if [ &#34;$s&#34; = &#34;powerline_precmd&#34; ]; then&#10;          return&#10;        fi&#10;      done&#10;      precmd_functions+=(powerline_precmd)&#10;    &#125;&#10;&#10;    install_powerline_precmd</span><br></pre></td></tr></table></figure></p>
+<p>到.zshrc时，要注意将其加<code>source $ZSH/oh-my-zsh.sh</code>之后，以可以使用Oh-My-Zsh的插件</p>
+<h2 id="插件配置">插件配置</h2><p>只需将你需要的插件，添加在.zshrc中得<code>plugins=(git autojump osx brew)</code>中即可</p>
+<h1 id="Tips">Tips</h1><ul>
+<li><p>Oh-My-Zsh也有款<a href="https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme" target="_blank" rel="external">powerline</a>主题，不过没有原生的好看.</p>
+</li>
+<li><p><a href="https://github.com/powerline/powerline" target="_blank" rel="external">Powerline</a>还有一个配置vim的版本，看其主页的介绍也是非常炫，有兴趣可以去研究下.</p>
+</li>
+</ul>
 
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is made by YangCheng, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cyang89.com/about/index.html" data-id="cibbxe8940007424ufj5yrwpe" class="article-share-link">Share</a>
+      <a data-url="http://cyang89.com/2015/06/25/Config-zsh-iterm2-in-mac/" data-id="cibbxe8970008424urkwbejr8" class="article-share-link">Share</a>
       
-        <a href="http://cyang89.com/about/index.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://cyang89.com/2015/06/25/Config-zsh-iterm2-in-mac/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terminal/">Terminal</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2015/06/18/Compile-CGAL-4-6-in-MacOs-10-10-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Learning CGAL - 1. Compile CGAL-4.6 in MacOs 10.10.3</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
